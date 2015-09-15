@@ -1,0 +1,29 @@
+<head>
+  <title>cpiapp</title>
+</head>
+
+<body>
+{{> maintemplate}}
+</body>
+
+<template name="userscount">
+<p>Number of users is: {{userscount}}</p>
+</template>
+
+<template name="maintemplate">
+{{> loginButtons}}
+{{> userscount}}
+
+  <h1>CPI Demo App</h1>
+{{#if adminuser}}
+{{> appDumpUI}}
+{{/if}}
+{{> accountBalances}}
+{{> subscriberClassic}}
+</template>
+
+<template name="accountBalances">
+Account Balances:
+CP$: {{CPD}}
+USD: {{USD}}
+</template>
