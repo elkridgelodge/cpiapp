@@ -7,6 +7,10 @@ Meteor.publish('userscount', function() {
   Counts.publish(this, 'users-counter', Meteor.users.find())
 })
 
+Meteor.publish('vendorscount', function() {
+  Counts.publish(this, 'vendors-counter', Meteor.users.find({type: "vendor"}))
+})
+
 Meteor.methods({
   CPDbalance: function (userId) {
     if (!userId) {

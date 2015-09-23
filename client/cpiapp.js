@@ -1,4 +1,5 @@
 Meteor.subscribe('userscount')
+Meteor.subscribe('vendorscount')
 
 Template.accountBalances.helpers({
   CPD: function () {
@@ -53,6 +54,9 @@ Template.maintemplate.helpers({
 Template.userscount.helpers({
   userscount: function () {
     return Counts.get('users-counter')
+  },
+  vendorscount: function () {
+    return Counts.get('users-vendors')
   },
 })
 
