@@ -12,11 +12,11 @@ Meteor.publish('vendorscount', function() {
 })
 
 Meteor.methods({
-  CPDbalance: function (userId) {
+  CBDbalance: function (userId) {
     if (!userId) {
       throw new Meteor.Error("no-user-id", "No User Id")
     }
-    return Meteor.users.findOne({}).account.CPD
+    return Meteor.users.findOne({}).account.CBD
   },
   USDbalance: function (userId) {
     if (!userId) {
