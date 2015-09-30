@@ -54,7 +54,7 @@ Accounts.onCreateUser(function (options, user) {
     code: Random.id(6)
   };
   user.account = {
-    CPD: 100,
+    CBD: 100,
     USD: 0
   }
   return Referral.beforeCreateUser ? Referral.beforeCreateUser(options, user) : user;
