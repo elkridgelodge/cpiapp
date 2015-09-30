@@ -1,0 +1,28 @@
+<template name="paymentform">
+  <h1>Purchase CB Form</h1>
+
+<div id="stripe-form">
+   <h2>Card info</h2>
+    <div class="form-row">
+      <div class="cc-text">Card Number</div>
+      <input type="text" size="30" autocomplete="off" class="card-number"/>
+    </div>
+    <div class="form-row">
+      <div class="cc-text">CVC</div>
+      <input type="text" size="4" autocomplete="off" class="card-cvc"/>
+    </div>
+    <div class="form-row">
+    </div>
+    <div class="form-row">
+      <div class="cc-text">Expiration (MM/YYYY)</div>
+      <input type="text" size="2" class="card-expiry-month"/>
+      <span> / </span>
+      <input type="text" size="4" class="card-expiry-year"/>
+    </div>
+    <input type="hidden" name="amount" value="2000" id="cc-amount">
+    <button type="submit" class="submit-button">Submit Payment</button>
+</div>
+<div id="error" class="hidden"></div>
+<div id="success" class="hidden">Thanks for purchasing CB!</div>
+</template>
+

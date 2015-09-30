@@ -1,0 +1,15 @@
+<template name="bulletin">
+  {{#each entries}}
+    {{> entry}}
+  {{/each}}
+  <p>Total: {{total}} of CB</p>
+</template>
+
+<template name="entry">
+  <div class="entry" style="border: 1px solid black">
+    <span class="entry-name">{{username}}</span>
+    <span class="entry-email">{{email}}</span>
+    <span class="entry-id">{{_id}}</span>
+  </div>
+</template>
+
