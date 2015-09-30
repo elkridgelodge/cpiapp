@@ -2,19 +2,19 @@ Meteor.subscribe('userscount')
 Meteor.subscribe('vendorscount')
 
 Template.accountBalances.helpers({
-  CPD: function () {
+  CBD: function () {
     var userId = Meteor.userId()
-    Meteor.call("CPDbalance", [Meteor.userId()], function (error, result) {
+    Meteor.call("CBDbalance", [Meteor.userId()], function (error, result) {
       if (error) {
         console.log(error.reason)
       }
       else {
-        Session.set('CPDbalance', result)
+        Session.set('CBDbalance', result)
 //        console.log(result)
 //        return result
       }
     })
-    return Session.get('CPDbalance')
+    return Session.get('CBDbalance')
   },
   USD: function () {
     var userId = Meteor.userId()
