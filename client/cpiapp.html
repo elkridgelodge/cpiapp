@@ -4,12 +4,9 @@
 
 <body>
 {{> maintemplate}}
+{{> paymentform}}
+{{> bulletin}}
 </body>
-
-<template name="userscount">
-<p>Number of users is: {{userscount}}</p>
-<p>Number of vendors is: {{vendorscount}}</p>
-</template>
 
 <template name="maintemplate">
 {{> loginButtons}}
@@ -23,8 +20,13 @@
 {{> subscriberClassic}}
 </template>
 
+<template name="userscount">
+<p>Number of users is: {{userscount}}</p>
+<p>Number of vendors is: {{vendorscount}}</p>
+</template>
+
 <template name="accountBalances">
 Account Balances:
-CP$: {{CPD}}
+CBD: {{CBD}}
 USD: {{USD}}
 </template>
