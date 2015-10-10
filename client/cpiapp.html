@@ -4,8 +4,10 @@
 
 <body>
 {{> maintemplate}}
+{{#if currentUser}}
 {{> paymentform}}
 {{> bulletin}}
+{{/if}}
 </body>
 
 <template name="maintemplate">
@@ -16,13 +18,17 @@
 {{#if adminuser}}
 {{> appDumpUI}}
 {{/if}}
-{{> accountBalances}}
-{{> subscriberClassic}}
 {{#if currentUser}}
+{{> accountBalances}}
+{{/if}}
+{{#unless currentUser}}
+{{> subscriberClassic}}
+{{/unless}}
+{{#unless currentUser}}
 {{> signupreferral}}
 {{else}}
 <p>You're logged in</p>
-{{/if}}
+{{/unless}}
 </template>
 
 <template name="userscount">
