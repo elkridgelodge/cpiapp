@@ -3,6 +3,10 @@ function adminUser(userId) {
   return (userId && adminUser && userId == adminUser._id)
 }
 
+Meteor.publish('referralcode', function () {
+  return Meteor.users.find({_id: userId}, {fields: {referral: code}})
+})
+
 Meteor.publish('userscount', function() {
   Counts.publish(this, 'users-counter', Meteor.users.find())
 })

@@ -24,11 +24,10 @@
 {{#unless currentUser}}
 {{> subscriberClassic}}
 {{/unless}}
-{{#unless currentUser}}
+{{#if currentUser}}
 {{> signupreferral}}
-{{else}}
 <p>You're logged in</p>
-{{/unless}}
+{{/if}}
 </template>
 
 <template name="userscount">
